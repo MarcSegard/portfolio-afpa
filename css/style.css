@@ -1,0 +1,36 @@
+body {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+.header {
+    grid-row: 1;
+    width:100 vw;
+    height: 50px;
+}
+
+.container {
+    grid-row: 2;
+}
+
+.card-id {
+    height: 220px;
+}
+
+.card-map, .card-address {
+    height: 100px
+}
+
+.row-experience-2015-description, .row-experience-2018-description, .row-experience-2015-graph, .row-experience-2018-graph{
+    height:200px;
+}
+
+.row-parcours-graph {
+    height: 400px;
+}
+
+.footer {
+    grid-row: 3;
+    width: 100 vw;
+    height: 50px;
+}
