@@ -76,10 +76,6 @@ body {
     display: table;
 }
 
-.timeline > li:after {
-    clear:both;
-}
-
 .timeline li .timeline-badge {
     color: rgb(24,83,179);
     width: 50px;
@@ -143,6 +139,24 @@ body {
     border-right-width: 14px;
     left: -14px;
     right: auto;
+}
+
+@media screen and (max-width: 550px) {
+    .timeline-body, .card-text {
+        display:none;
+    }
+
+    .loc-string {
+        font-size: 0.75rem;
+    }
+
+   #cda, h3, h5, h4 {
+        font-size: 1.1rem ;
+    }
+
+    .card-text, .text-end {
+        font-size: 0.7rem;
+    }
 }
 
 footer a {
