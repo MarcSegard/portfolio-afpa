@@ -26,6 +26,24 @@ body {
     background-color: rgb(24,83,179);
 }
 
+@media screen and (max-width: 1000px) {
+    
+    #btn-cv-label, #btn-contact-label {
+        display:none;
+    }
+
+    #btn-cv::before {
+        content:"CV";
+        align-content: center;
+    }
+
+    #btn-contact::before {
+        content: '\0040';
+        font-size: 1.3rem;
+        align-content: center;
+    }
+}
+
 /* parcours-pro */
 .timeline {
     list-style: none;
