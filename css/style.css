@@ -10,6 +10,10 @@ body {
     width: 20px;
 }
 
+#cda {
+    font-size: 1.5rem;
+}
+
 #cda span, #position, #envelope, #btn-contact, #btn-cv, #exp-2015, #exp-2018{
     color: rgb(24,83,179);
 }
@@ -90,7 +94,6 @@ body {
     border-radius: 7px;
     padding: 20px 25px;
     position: relative;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.175);
     background-color: white;
 
 }
