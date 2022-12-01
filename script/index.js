@@ -96,3 +96,4 @@ const popUpTextExp2018 = document.getElementById('pop-up-exp-2018-text')
 clickPopUpExp2018.addEventListener("click", () => {
   popUpTextExp2018.classList.toggle("show");
 })
+
