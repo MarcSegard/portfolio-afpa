@@ -28,36 +28,44 @@ valuePorgressBars2.set("Docker", "65%")
 valuePorgressBars2.set("Wireshark", "70%")
 valuePorgressBars2.set("Suricata", "80%")
 
-for (const [key,value] of valuePorgressBars) {
-    experienceGraph2015[0].innerHTML +=  
-    `<div class=\"row col-12\">
-    <div class=\"col-4 text-end\">${key}</div>
-    <div class=\"progress col-8 pt-1\">
-      <div
-        class=\"progress-bar\"
-        role=\"progressbar\"
-        style=\"width: ${value}\"
-        aria-valuenow=\"25\"
-        aria-valuemin=\"0\"
-        aria-valuemax=\"100\"
-      ></div>
-    </div>
-    </div>`
+const generateStat = (key, value) => {
+  return `<div class=\"row col-12\">
+  <div class=\"col-4 text-end\">${key}</div>
+  <div class=\"progress col-8 pt-1\">
+  <div
+  class=\"progress-bar rounded-pill\"
+  role=\"progressbar\"
+  style=\"width: ${value}\"
+  aria-valuenow=\"25\"
+  aria-valuemin=\"0\"
+  aria-valuemax=\"100\"
+  ></div>
+  </div>
+  </div>`;
 }
 
-for (const [key,value] of valuePorgressBars2) {
-    experienceGraph2018[0].innerHTML += 
-    `<div class=\"row col-12\">
-    <div class=\"col-4 text-end\">${key}</div>
-    <div class=\"progress col-8 pt-1\">
-      <div
-        class=\"progress-bar\"
-        role=\"progressbar\"
-        style=\"width: ${value}\"
-        aria-valuenow=\"25\"
-        aria-valuemin=\"0\"
-        aria-valuemax=\"100\"
-      ></div>
-    </div>
-    </div>`
-}
+
+
+valuePorgressBars.forEach((value,key) => {
+  experienceGraph2015[0].innerHTML +=  generateStat(key,value)
+})
+
+valuePorgressBars2.forEach((value,key) => {
+  experienceGraph2018[0].innerHTML += generateStat(key,value)
+})
+
+const progressBars = document.getElementsByClassName('progress-bar')
+
+
+Object.values(progressBars).forEach(element => {
+  let value = element.getAttribute('style').substring(7,9)
+  element.setAttribute('style', `width: 0%`)
+  let count = 0
+  let progressAnimation = setInterval(() => {
+    count++
+    element.setAttribute('style', `width: ${count}%`)
+    if (count >= value) {
+      clearInterval(progressAnimation)
+    }
+  },10)
+})
