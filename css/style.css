@@ -183,7 +183,7 @@ footer a {
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
-  width: 470px;
+  /* width: 470px; */
   background-color:white;
   border: 1px solid rgb(217, 211, 211);
   border-radius: 5px;
@@ -221,4 +221,10 @@ footer a {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+@media screen and (max-width: 1090px) {
+    .popup {
+        width:75%;
+    }
 }
