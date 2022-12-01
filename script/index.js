@@ -71,3 +71,14 @@ Object.values(progressBars).forEach(element => {
     }
   },10)
 })
+
+// Improve hamburger menu behavior
+// before the menu was still displayed even after clicking
+const clickMenu = document.getElementsByClassName('nav-item')
+const hamburger = document.getElementById('navbarCollapse')
+
+Object.values(clickMenu).forEach(element => {
+  element.addEventListener("click", () => {
+    hamburger.classList.remove('show')
+  })
+})
