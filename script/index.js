@@ -82,3 +82,17 @@ Object.values(clickMenu).forEach(element => {
     hamburger.classList.remove('show')
   })
 })
+
+const clickPopUpExp2015 = document.getElementById('pop-up-exp-2015')
+const popUpTextExp2015 = document.getElementById('pop-up-exp-2015-text')
+
+clickPopUpExp2015.addEventListener("click", () => {
+  popUpTextExp2015.classList.toggle("show");
+})
+
+const clickPopUpExp2018 = document.getElementById('pop-up-exp-2018')
+const popUpTextExp2018 = document.getElementById('pop-up-exp-2018-text')
+
+clickPopUpExp2018.addEventListener("click", () => {
+  popUpTextExp2018.classList.toggle("show");
+})
