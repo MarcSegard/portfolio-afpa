@@ -1,3 +1,5 @@
+//// Change button icon with javascript
+
 // const boutonContact = document.getElementById('btn-contact')
 // const boutonCV = document.getElementById('btn-cv')
 
@@ -62,7 +64,7 @@ Object.values(progressBars).forEach(element => {
   element.setAttribute('style', `width: 0%`)
   let count = 0
   let progressAnimation = setInterval(() => {
-    count++
+    count ++
     element.setAttribute('style', `width: ${count}%`)
     if (count >= value) {
       clearInterval(progressAnimation)
