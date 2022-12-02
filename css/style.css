@@ -2,14 +2,11 @@ body {
     background-color: rgb(243,242,238);
 }
 
-.card-contact, .card-address {
-    height: 100px
-} 
-
 .navbar-brand {
     width: 20px;
 }
 
+/* CDA card */
 #cda {
     font-size: 1.5rem;
 }
@@ -20,6 +17,11 @@ body {
 
 #cda span {
     font-weight: 800;
+}
+
+/* card conatct and address */
+.card-contact, .card-address {
+    height: 100px;
 }
 
 #btn-contact, #btn-cv {
@@ -47,11 +49,66 @@ body {
 /* Expérience */
 .card-more {
     position: relative;
-
 }
 
 
 
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(24,83,179);
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    /* width: 470px; */
+    background-color:white;
+    border: 1px solid rgb(217, 211, 211);
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding-top: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* margin-left: -80px; */
+}
+
+/* Don't use here */
+/* Popup arrow
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: -4%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgb(217, 211, 211)  transparent transparent;
+} */
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@media screen and (max-width: 1090px) {
+    .popup {
+        width:75%;
+    }
+}
 
 /* parcours-pro */
 .timeline {
@@ -159,7 +216,7 @@ body {
         font-size: 0.75rem;
     }
 
-   #cda, h3, h5, h4 {
+    #cda, h3, h5, h4 {
         font-size: 1.1rem ;
     }
 
@@ -167,68 +224,6 @@ body {
         font-size: 0.7rem;
     }
 }
-
-footer a {
-    color: rgb(24,83,179);
-}
-
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  color: rgb(24,83,179);
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  /* width: 470px; */
-  background-color:white;
-  border: 1px solid rgb(217, 211, 211);
-  border-radius: 5px;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding-top: 8px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  /* margin-left: -80px; */
-}
-
-/* Don't use here */
-/* Popup arrow
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 5%;
-  left: -4%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgb(217, 211, 211)  transparent transparent;
-} */
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-@media screen and (max-width: 1090px) {
-    .popup {
-        width:75%;
-    }
-}
-
 @keyframes startLinkedIn {
     0% {
         transform: scale(1);
@@ -247,7 +242,6 @@ footer a {
     }
 }
 
-
 .linkedin{
     bottom: 50px;
     right: 20px;
@@ -256,4 +250,8 @@ footer a {
     animation-iteration-count: 2;
     animation-timing-function: ease-in-out;
     
+}
+
+footer a {
+    color: rgb(24,83,179);
 }
