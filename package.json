@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "mon portfolio",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcSegard/portfolio-afpa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcSegard/portfolio-afpa/issues"
+  },
+  "homepage": "https://github.com/MarcSegard/portfolio-afpa#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

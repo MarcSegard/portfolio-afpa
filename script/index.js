@@ -35,7 +35,7 @@ const generateStat = (key, value) => {
   <div class=\"col-4 text-end\">${key}</div>
   <div class=\"progress col-8 pt-1\">
   <div
-  class=\"progress-bar rounded-pill\"
+  class=\"progress-bar bg-myColor rounded-pill \"
   role=\"progressbar\"
   style=\"width: ${value}\"
   aria-valuenow=\"25\"
