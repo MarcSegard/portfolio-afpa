@@ -11,13 +11,14 @@
 
 // Carousel configuration parameters
 $n: 8;
-$item-width: 400px;
+$item-width: 500px;
 $item-separation: 80px;
 $viewer-distance: 500px;
 
 // Derived variables
 $theta: 2 * 3.141592653589793 / $n; 
-$apothem: 482.842712474619px;
+// $apothem: 482.842712474619px;
+$apothem: 600px;
 
 .carousel-3d {
 	padding: 20px;
@@ -61,24 +62,4 @@ $apothem: 482.842712474619px;
 			}
 		}
 	}
-	
-	nav {
-		display: flex;
-		justify-content: center;
-		margin: 20px 0 0;
-		
-		button {
-			flex: 0 0 auto;
-			margin: 0 5px;
-			
-			cursor: pointer;
-			
-			color: #333;
-			background: none;
-			border: 1px solid;
-			letter-spacing: 1px;
-			padding: 5px 10px;
-		}
-	}
-	
 }

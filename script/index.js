@@ -98,29 +98,12 @@ clickPopUpExp2018.addEventListener("click", () => {
 
 const carousel3D = document.querySelector('.carousel-3d')
 const figure = carousel3D.querySelector('figure')
-const	nav = carousel3D.querySelector('nav')
 const numImages = figure.childElementCount
 const theta =  2 * Math.PI / numImages
-let currImage = 0
+let countImage = 0
 
-	
-nav.addEventListener('click', onClick, true);
-
-function onClick(e) {
-	e.stopPropagation();
-	
-	var t = e.target;
-	if (t.tagName.toUpperCase() != 'BUTTON')
-		return;
-	
-	if (t.classList.contains('next')) {
-		currImage++;
-	}
-	else {
-		currImage--;
-	}
-	
-	figure.style.transform = `rotateY(${currImage * -theta}rad)`;
-}
-
+setInterval(() => {
+  countImage ++
+  figure.style.transform = `rotateY(${countImage * -theta}rad)`;
+},3000)
 
