@@ -75,10 +75,12 @@ Object.values(progressBars).forEach(element => {
 // before the menu was still displayed even after clicking
 const clickMenu = document.getElementsByClassName('nav-item')
 const hamburger = document.getElementById('navbarCollapse')
+const buttonNavBar = document.querySelector('.navbar-toggler')
 
 Object.values(clickMenu).forEach(element => {
   element.addEventListener("click", () => {
     hamburger.classList.remove('show')
+    buttonNavBar.classList.toggle('collapsed')
   })
 })
 
