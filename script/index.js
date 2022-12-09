@@ -73,7 +73,7 @@ valuePorgressBars2.set("Suricata", "80%")
 const generateStat = (key, value) => {
   return `<div class=\"row col-12\">
   <div class=\"col-4 text-end\">${key}</div>
-  <div class=\"progress col-8 pt-1\">
+  <div class=\"progress p-0 col-8\">
   <div
   class=\"progress-bar bg-myColor rounded-pill \"
   role=\"progressbar\"
@@ -111,7 +111,7 @@ Object.values(progressBars).forEach(element => {
     element.classList.add('bg-myColorDark')
   }
   let value = element.getAttribute('style').substring(7,9)
-  element.setAttribute('style', `width: 0%`)
+  element.setAttribute('style', `width: 0`)
   let count = 0
   let progressAnimation = setInterval(() => {
     count ++
