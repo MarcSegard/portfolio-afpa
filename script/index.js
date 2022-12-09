@@ -7,6 +7,15 @@
 //     boutonCV.innerText = "CV"
 // }
 
+const isDarkMode = () =>
+	globalThis.matchMedia?.("(prefers-color-scheme:dark)").matches ?? false;
+
+// Usage
+isDarkMode()
+
+
+
+
 const experienceGraph2015 = document.getElementsByClassName('row-experience-2015-graph')
 const experienceGraph2018 = document.getElementsByClassName('row-experience-2018-graph')
 const valuePorgressBars = new Map()
