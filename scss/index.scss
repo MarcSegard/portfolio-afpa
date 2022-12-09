@@ -1,5 +1,7 @@
 $theme-colors: (
-    'myColor': rgb(24,83,179)
+    'myColor': rgb(24,83,179),
+    'myColorDark': rgb(0,158,255),
+    'myBgBlack': rgb(44,59,86)
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

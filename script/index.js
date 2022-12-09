@@ -10,11 +10,43 @@
 const isDarkMode = () =>
 	globalThis.matchMedia?.("(prefers-color-scheme:dark)").matches ?? false;
 
-// Usage
-isDarkMode()
+
+if (isDarkMode()) {
+  const body = document.getElementsByTagName('body')
+  console.log(body)
+  body[0].classList.add('text-white')
+  body[0].classList.add('bg-myBgBlack')
 
 
+  const elements_myColor = document.querySelectorAll('.text-myColor')
+  elements_myColor.forEach( element => {
+    element.classList.remove('text-myColor')
+    element.classList.add('text-myColorDark')
+  })
+  const elements_white = document.querySelectorAll('.text-white')
+  elements_white.forEach( element => {
+    element.classList.remove('text-white')
+    element.classList.add('text-black')
+  })
+  const elements_bg_myColor = document.querySelectorAll('.bg-myColor')
+  elements_bg_myColor.forEach( element => {
+    element.classList.remove('bg-myColor')
+    element.classList.add('bg-myColorDark')
+  })
 
+  const elements_bg_white = document.querySelectorAll('.bg-white')
+  elements_bg_white.forEach( element => {
+    element.classList.remove('bg-white')
+    element.classList.add('bg-myBgBlack')
+  })
+
+  const stringExperience = document.querySelector('.row-string-experience')
+  stringExperience.classList.add('text-white')
+  const stringParcoursPro = document.querySelector('.row-string-parcours')
+  stringParcoursPro.classList.add('text-white')
+  const stringPortfolio = document.querySelector('.row-string-portfolio')
+  stringPortfolio.classList.add('text-white')
+}
 
 const experienceGraph2015 = document.getElementsByClassName('row-experience-2015-graph')
 const experienceGraph2018 = document.getElementsByClassName('row-experience-2018-graph')
@@ -46,7 +78,7 @@ const generateStat = (key, value) => {
   class=\"progress-bar bg-myColor rounded-pill \"
   role=\"progressbar\"
   style=\"width: ${value}\"
-  aria-valuenow=\"25\"
+  aria-valuenow=\"0\"
   aria-valuemin=\"0\"
   aria-valuemax=\"100\"
   ></div>
@@ -58,16 +90,26 @@ const generateStat = (key, value) => {
 
 valuePorgressBars.forEach((value,key) => {
   experienceGraph2015[0].innerHTML +=  generateStat(key,value)
+  if (isDarkMode()) {
+    experienceGraph2015[0].classList.add('text-white')
+  }
 })
 
 valuePorgressBars2.forEach((value,key) => {
   experienceGraph2018[0].innerHTML += generateStat(key,value)
+  if (isDarkMode()) {
+    experienceGraph2018[0].classList.add('text-white')
+  }
 })
 
 const progressBars = document.getElementsByClassName('progress-bar')
 
 
 Object.values(progressBars).forEach(element => {
+  if (isDarkMode()) {
+    element.classList.remove('bg-myColor')
+    element.classList.add('bg-myColorDark')
+  }
   let value = element.getAttribute('style').substring(7,9)
   element.setAttribute('style', `width: 0%`)
   let count = 0
